@@ -1,5 +1,5 @@
 import { ItemList } from '../ItemList';
-import { testItemList } from './ItemListTestData'
+import { testItemList, loadingItemList } from './ItemListTestData'
 
 export default {
   title: 'Items/ItemList',
@@ -11,4 +11,9 @@ const Template = (args) => <ItemList {...args} />;
 export const Default = Template.bind({});
 Default.args = {
   itemsData: testItemList
+};
+
+export const Loading = Template.bind({});
+Loading.args = {
+  itemsData: loadingItemList
 };

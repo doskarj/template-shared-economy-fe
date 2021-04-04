@@ -3,8 +3,8 @@ import { Item } from '../item/Item'
 import './ItemList.css'
 
 export const ItemList = ({ itemsData }) => {
-  const items = itemsData.map(item => {
-    return <Item item={item} />
+  const items = itemsData.map(itemData => {
+    return <Item item={itemData.item} isLoading={itemData.isLoading} />
   })
 
   return (
