@@ -12,3 +12,9 @@ export const Default = Template.bind({});
 Default.args = {
   item: { ...testItem01 }
 };
+
+export const Loading = Template.bind({});
+Loading.args = {
+  item: {},
+  isLoading: true
+};

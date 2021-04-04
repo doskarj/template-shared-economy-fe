@@ -1,0 +1,30 @@
+.color-secondary {
+  color: var(--color-disabled);
+}
+.color-gray {
+  color: var(--color-gray);
+}
+
+.skeleton {
+  background-image: linear-gradient(var(--color-disabled) 100%, transparent 0);
+  animation: linearAnim 1s infinite linear
+}
+
+@keyframes linearAnim {
+  0% {
+    opacity: 0.9;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 0.9;
+  }
+}
+
+
+.ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
