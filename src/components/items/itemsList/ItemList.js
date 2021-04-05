@@ -1,27 +1,28 @@
 import PropTypes from 'prop-types'
 import { Item } from '../item/Item'
-import { Button } from '../../atoms/button/Button'
+import { ButtonIcon } from '../../atoms/buttonIcon/ButtonIcon'
 import { ButtonGroup } from '../../atoms/buttonGroup/ButtonGroup'
 import './ItemList.css'
 
 export const ItemList = ({ title, isLoading, itemsData }) => {
-  const loadingItemList = [
-    <Item item={{}} isLoading={true} />,
-    <Item item={{}} isLoading={true} />,
-    <Item item={{}} isLoading={true} />,
-    <Item item={{}} isLoading={true} />
+  let items = [];
+  let controlButtons = [
+    <ButtonIcon label="previous" iconName="arrow_back_ios_new" isDisabled={isLoading} />,
+    <ButtonIcon label="next" iconName="arrow_forward_ios" isDisabled={isLoading} />
   ]
 
-  const items = isLoading ?
-    loadingItemList :
-    itemsData.map(itemData => {
+  if (isLoading) {
+    items = [
+      <Item item={{}} isLoading={true} />,
+      <Item item={{}} isLoading={true} />,
+      <Item item={{}} isLoading={true} />,
+      <Item item={{}} isLoading={true} />
+    ]
+  } else {
+    items = itemsData.map(itemData => {
       return <Item item={itemData.item} isLoading={itemData.isLoading} />
     })
-
-  const controlButtons = [
-    <Button label="previous" />,
-    <Button label="next" />
-  ]
+  }
 
   return (
     <div className="item-list">
