@@ -1,5 +1,7 @@
 import PropTypes from 'prop-types'
 import { Item } from '../item/Item'
+import { Button } from '../../atoms/button/Button'
+import { ButtonGroup } from '../../atoms/buttonGroup/ButtonGroup'
 import './ItemList.css'
 
 export const ItemList = ({ title, isLoading, itemsData }) => {
@@ -16,12 +18,16 @@ export const ItemList = ({ title, isLoading, itemsData }) => {
       return <Item item={itemData.item} isLoading={itemData.isLoading} />
     })
 
+  const controlButtons = [
+    <Button label="previous" />,
+    <Button label="next" />
+  ]
+
   return (
     <div className="item-list">
       <div className="item-list-controls">
         <h3>{title}</h3>
-        <span className="material-icons">arrow_forward_ios</span>
-        <span className="material-icons">previous</span>
+        <ButtonGroup buttons={controlButtons} />
       </div>
       <div className="item-list-items">
         {items}

@@ -1,12 +1,12 @@
-import { ButtonGroup } from '../ButtonGroup'
 import { Button } from '../../button/Button'
-import { Icon } from '../../icon/Icon'
+import { ButtonGroup } from '../ButtonGroup'
+import { ButtonIcon } from '../../buttonIcon/ButtonIcon'
 
 const testButton01 = <Button label="Button01" />
 const testButton02 = <Button label="Button02" />
-const testIconButton01 = <Button label="Button01" icon={<Icon name="home" colorHash="#fff" />}/>
-const testIconButton02 = <Button label="Button02" icon={<Icon name="fingerprint" colorHash="#fff" />}/>
-const testIconButton03 = <Button label="Button03" icon={<Icon name="favorite" colorHash="#fff" />}/>
+const testIconButton01 = <ButtonIcon label="Button01" iconName="home"/>
+const testIconButton02 = <ButtonIcon label="Button02" iconName="fingerprint"/>
+const testIconButton03 = <ButtonIcon label="Button03" iconName="favorite"/>
 
 export default {
   title: 'Atoms/ButtonGroup',

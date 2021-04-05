@@ -1,15 +1,18 @@
-import { Button } from '../Button';
+import { ButtonIcon } from '../ButtonIcon';
 
 export default {
-  title: 'Atoms/Button',
-  component: Button,
+  title: 'Atoms/ButtonIcon',
+  component: ButtonIcon,
 };
 
-const Template = (args) => <Button {...args} />;
+const Template = (args) => <ButtonIcon {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-  label: 'Button'
+  iconName: 'home',
+  label: 'Home',
+  isLoading: false,
+  isDisabled: false
 };
 export const Disabled = Template.bind({});
 Disabled.args = {
@@ -21,3 +24,4 @@ Loading.args = {
   ...Default.args,
   isLoading: true
 };
+

@@ -1,23 +1,26 @@
 import PropTypes from 'prop-types';
+import classnames from "classnames";
 import './Button.css';
 import icons from '../../../assets/icons'
 
-export const Button = ({ label, isLoading, isDisabled, icon, ...props }) => {
+export const Button = ({ label, slot, isLoading, isDisabled, ...props }) => {
+  console.log(props);
+  
   return (
     <button
       type="button"
-      className={[
+      className={classnames(
         'button',
-        !!icon && 'button--icon',
         isLoading && 'button--loading', 
-        isDisabled && 'button--disabled'].join(' ')}
-      {...props}
+        isDisabled && 'button--disabled',
+        props.className
+      )}
     >
       {isLoading ? (
         <img src={icons.loading} alt="Loading"/>
       ) : (
-        !!icon ?
-          icon :
+        !!slot ?
+          slot :
           label
       )}
     </button>
@@ -26,6 +29,7 @@ export const Button = ({ label, isLoading, isDisabled, icon, ...props }) => {
 
 Button.propTypes = {
   label: PropTypes.string.isRequired,
+  slot: PropTypes.element,
   isLoading: PropTypes.bool.isRequired,
   isDisabled: PropTypes.bool.isRequired,
   onClick: PropTypes.func,

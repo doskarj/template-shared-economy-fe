@@ -19,12 +19,6 @@
   background-color: var(--color-secondary);
 }
 
-.button--icon {
-  min-width: 40px;
-  width: 40px;
-  padding: 10px;
-}
-
 .button--loading {
   background-color: var(--color-disabled);
   cursor: default;
@@ -41,6 +35,12 @@
   background-color: var(--color-disabled);
   cursor: default;
   pointer-events: none;
+}
+
+.button--icon {
+  min-width: 40px;
+  width: 40px;
+  padding: 10px;
 }
 
 @keyframes rotating {
