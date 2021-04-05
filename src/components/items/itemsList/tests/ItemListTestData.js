@@ -6,10 +6,3 @@ export const testItemList = [
   { item: testItem03, isLoading: false },
   { item: testItem04, isLoading: false }
 ]
-
-export const loadingItemList = [
-  { item: {}, isLoading: true },
-  { item: {}, isLoading: true },
-  { item: {}, isLoading: true },
-  { item: {}, isLoading: true }
-]
