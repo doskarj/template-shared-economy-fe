@@ -2,23 +2,26 @@
   display: inline-block;
   height: 40px;
   min-width: 100px;
-
   font-size: 14px;
   padding: 11px 20px;
-  
   border: 0;
   font-weight: 700;
   text-transform: uppercase;
   color: white;
   background-color: var(--color-primary);
-  
   cursor: pointer;
   outline: none;
-
   transition: all 0.20s ease-out;
 }
+
 .button:hover {
   background-color: var(--color-secondary);
+}
+
+.button--icon {
+  min-width: 40px;
+  width: 40px;
+  padding: 10px;
 }
 
 .button--loading {
@@ -26,11 +29,13 @@
   cursor: default;
   pointer-events: none;
 }
+
 .button--loading img {
   width: 20px;
   height: 20px;
   animation: rotating 0.6s linear infinite;
 }
+
 .button--disabled {
   background-color: var(--color-disabled);
   cursor: default;

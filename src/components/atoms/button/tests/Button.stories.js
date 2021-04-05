@@ -1,4 +1,5 @@
 import { Button } from '../Button';
+import { Icon } from '../../icon/Icon';
 
 export default {
   title: 'Atoms/Button',
@@ -24,8 +25,8 @@ Disabled.args = {
   isDisabled: true
 };
 
-export const Icon = Template.bind({});
-Icon.args = {
+export const IconButton = Template.bind({});
+IconButton.args = {
   ...Default.args,
-  isDisabled: true
+  icon: <Icon name="home" colorHash="#fff" />
 };

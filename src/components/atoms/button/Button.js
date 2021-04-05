@@ -6,7 +6,11 @@ export const Button = ({ label, isLoading, isDisabled, icon, ...props }) => {
   return (
     <button
       type="button"
-      className={['button', isLoading && 'button--loading', isDisabled && 'button--disabled'].join(' ')}
+      className={[
+        'button',
+        !!icon && 'button--icon',
+        isLoading && 'button--loading', 
+        isDisabled && 'button--disabled'].join(' ')}
       {...props}
     >
       {isLoading ? (
