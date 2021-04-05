@@ -12,21 +12,32 @@ export const Default = Template.bind({});
 Default.args = {
   label: 'Button',
 };
-
+export const Disabled = Template.bind({});
+Disabled.args = {
+  ...Default.args,
+  isDisabled: true
+};
 export const Loading = Template.bind({});
 Loading.args = {
   ...Default.args,
   isLoading: true
 };
 
-export const Disabled = Template.bind({});
-Disabled.args = {
-  ...Default.args,
-  isDisabled: true
-};
-
-export const IconButton = Template.bind({});
-IconButton.args = {
+export const IconButtonDefault = Template.bind({});
+IconButtonDefault.args = {
   ...Default.args,
   icon: <Icon name="home" colorHash="#fff" />
 };
+export const IconButtonDisabled = Template.bind({});
+IconButtonDisabled.args = {
+  ...Default.args,
+  isDisabled: true,
+  icon: <Icon name="home" colorHash="#fff" />
+};
+export const IconButtonLoading = Template.bind({});
+IconButtonLoading.args = {
+  ...Default.args,
+  isLoading: true,
+  icon: <Icon name="home" colorHash="#fff" />
+};
+

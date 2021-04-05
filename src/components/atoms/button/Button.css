@@ -12,6 +12,7 @@
   cursor: pointer;
   outline: none;
   transition: all 0.20s ease-out;
+  user-select: none;
 }
 
 .button:hover {
