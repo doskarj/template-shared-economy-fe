@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { Button } from '../Button';
 
 export default {
@@ -22,6 +20,12 @@ Loading.args = {
 
 export const Disabled = Template.bind({});
 Disabled.args = {
+  ...Default.args,
+  isDisabled: true
+};
+
+export const Icon = Template.bind({});
+Icon.args = {
   ...Default.args,
   isDisabled: true
 };

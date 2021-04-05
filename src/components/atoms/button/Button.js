@@ -1,9 +1,8 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 import './Button.css';
-import icons from '../../assets/icons'
+import icons from '../../../assets/icons'
 
-export const Button = ({ label, isLoading, isDisabled, ...props }) => {
+export const Button = ({ label, isLoading, isDisabled, icon, ...props }) => {
   return (
     <button
       type="button"
@@ -13,7 +12,9 @@ export const Button = ({ label, isLoading, isDisabled, ...props }) => {
       {isLoading ? (
         <img src={icons.loading} alt="Loading"/>
       ) : (
-        label
+        !!icon ?
+          icon :
+          label
       )}
     </button>
   );
