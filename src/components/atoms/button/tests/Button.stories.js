@@ -23,9 +23,10 @@ Loading.args = {
   isLoading: true
 };
 
+// TODO: Move to separate component ButtonIcon
 export const IconButtonDefault = Template.bind({});
 IconButtonDefault.args = {
-  ...Default.args,
+  label: 'Button',
   icon: <Icon name="home" colorHash="#fff" />
 };
 export const IconButtonDisabled = Template.bind({});
