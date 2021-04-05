@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
 * {
   box-sizing: border-box;
@@ -17,18 +18,4 @@ body {
   -moz-osx-font-smoothing: grayscale;
 
   color: var(--color-primary);
-}
-
-.skeleton {
-  background-repeat: no-repeat;
-  background-image: 
-    /* layer 2: avatar */
-    /* white circle with 16px radius */
-    radial-gradient(circle 16px, white 99%, transparent 0),
-    /* layer 1: title */
-    /* white rectangle with 40px height */
-    linear-gradient(white 40px, transparent 0),
-    /* layer 0: card bg */
-    /* gray rectangle that covers whole element */
-    linear-gradient(gray 100%, transparent 0);
 }

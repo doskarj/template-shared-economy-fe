@@ -4,6 +4,4 @@ const icons = {
   loading
 }
 
-console.log(icons);
-
 export default icons
