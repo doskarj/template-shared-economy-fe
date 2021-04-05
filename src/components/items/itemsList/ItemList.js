@@ -5,6 +5,7 @@ import { ButtonGroup } from '../../atoms/buttonGroup/ButtonGroup'
 import './ItemList.css'
 
 export const ItemList = ({ title, isLoading, itemsData }) => {
+  console.log(isLoading);
   let items = [];
   let controlButtons = [
     <ButtonIcon label="previous" iconName="arrow_back_ios_new" isDisabled={isLoading} />,
@@ -37,8 +38,13 @@ export const ItemList = ({ title, isLoading, itemsData }) => {
   )
 }
 
-Item.propTypes = {
+ItemList.propTypes = {
   title: PropTypes.string.isRequired,
   isLoading: PropTypes.bool.isRequired,
   itemsData: PropTypes.array.isRequired
+};
+
+ItemList.defaultProps = {
+  isLoading: false,
+  itemsData: []
 };

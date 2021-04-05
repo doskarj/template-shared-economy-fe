@@ -24,7 +24,7 @@ ButtonIcon.propTypes = {
   onClick: PropTypes.func,
 };
 
-Button.defaultProps = {
+ButtonIcon.defaultProps = {
   isLoading: false,
   isDisabled: false,
   onClick: undefined,

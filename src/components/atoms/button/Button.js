@@ -4,8 +4,6 @@ import './Button.css';
 import icons from '../../../assets/icons'
 
 export const Button = ({ label, slot, isLoading, isDisabled, ...props }) => {
-  console.log(props);
-  
   return (
     <button
       type="button"

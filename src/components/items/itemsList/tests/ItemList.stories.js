@@ -19,5 +19,5 @@ export const Loading = Template.bind({});
 Loading.args = {
   ...Default.args,
   isLoading: true,
-  itemsData: undefined
+  itemsData: []
 };
